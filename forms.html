@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workers Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery UI -->
+    <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+
+    <link href="css/forms.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">Workers Dashboard</a></h1>
+	              </div>
+	           </div>
+	           <div class="col-md-5">
+	              <div class="row">
+	                <div class="col-lg-12">
+	                  <div class="input-group form">
+	                       <input type="text" class="form-control" placeholder="Search...">
+	                       <span class="input-group-btn">
+	                         <button class="btn btn-primary" type="button">Search</button>
+	                       </span>
+	                  </div>
+	                </div>
+	              </div>
+	           </div>
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          <li><a href="profile.html">Profile</a></li>
+	                          <li><a href="login.html">Logout</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendario </a></li>
+                    <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Estatisticas (Charts)</a></li>
+                    <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tabelas</a></li>
+                    <li class="current"><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Formularios </a></li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					<div class="content-box-large">
+			  				<div class="panel-heading">
+					            <div class="panel-title">Cadastro Categoria</div>
+					          
+					            <div class="panel-options">
+					              <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+					              <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+					            </div>
+					        </div>
+			  				<div class="panel-body">
+			  					<form class="form-horizontal" role="form">
+								  <div class="form-group">
+								    <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" name="nomeCategoria" id="nomeCategoria" placeholder="Nome Categoria">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" id="nomeCategoria2" placeholder="Confirmar Nome">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      <button type="submit" class="btn btn-primary">Cadastrar</button>
+								    </div>
+								  </div>
+								</form>
+			  				</div>
+			  			</div>
+	  				</div>
+	  				<div class="col-md-6">
+	  					<div class="content-box-large">
+			  				<div class="panel-heading">
+					            <div class="panel-title">Cadastro Subcategoria</div>
+					          
+					            <div class="panel-options">
+					              <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+					              <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+					            </div>
+					        </div>
+			  				<div class="panel-body">
+			  					<form class="form-horizontal" role="form">
+                                    <div class="form-group">
+								    <label for="inputEmail3" class="col-sm-2 control-label">Categoria</label>    
+                                    <div class="col-sm-10">
+			  							<div class="bfh-selectbox" data-name="selectbox3" data-value="" data-filter="true" id="selecionaCategoria">
+										  <div>Selecionar</div>
+										</div>
+			  					      </div>
+                                    </div>    
+								  <div class="form-group">
+								    <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" name="nomeSubcategoria" id="nomeSubcategoria" placeholder="Nome Categoria">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <label for="inputPassword3" class="col-sm-2 control-label">Confirmar Nome</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" id="nomesubCategoria2" placeholder="Confirmar Nome">
+								    </div>
+								  </div>
+								  <div class="form-group">
+								    <div class="col-sm-offset-2 col-sm-10">
+								      <button type="submit" class="btn btn-primary">Cadastrar</button>
+								    </div>
+								  </div>
+								</form>
+			  				</div>
+			  			</div>
+	  				</div>
+	  			</div>
+	  			<div class="row">
+	  				<div class="col-md-12 panel-info">
+			  			<div class="content-box-header panel-heading">
+		  					<div class="panel-title ">Cadastro Usuario</div>
+							
+							<div class="panel-options">
+								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+							</div>
+			  			</div>
+			  			<div class="content-box-large box-with-header">
+				  			<div>
+
+								<div class="row">
+									<div class="col-sm-6">
+                                        <label>Nome</label>
+										<input id="nome" name="nome" type="text" class="form-control" placeholder="Ex: João">
+									</div>
+                                    <div class="col-sm-6">
+                                        <label>Sobrenome</label>
+										<input id="sobrenome" name="sobrenome" type="text" class="form-control" placeholder="Ex: Almeida">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-6">
+                                        <label>Email</label>
+										<input id="email" name="email" type="email" class="form-control" placeholder="Ex: email@email.com">
+									</div>
+									<div class="col-sm-3">
+                                        <label>Cpf</label>
+										<input id="cpf" name="cpf" type="text" class="form-control" data-mask="999.999.999-99" data-mask-placeholder="0" placeholder="000.000.000-00">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Rg</label>
+										<input id="rg" name="rg" type="text" class="form-control" placeholder="RG">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-3">
+                                        <label>Telefone</label>
+										<input id="telefone" name="telefone" type="text" class="form-control" data-mask="(99)9999-9999" data-mask-placeholder="0" placeholder="(00)0000-0000"/>
+									</div>
+									<div class="col-sm-3">
+                                        <label>Celular</label>
+										<input id="celular" name="celular" type="text" class="form-control" data-mask="(99)9999-9999" data-mask-placeholder="0" placeholder="(00)0000-0000">
+									</div>
+									<div class="col-sm-3">
+                                        <label>Nascimento</label>
+										<input id="nascimento" name="nascimento" type="text" class="form-control" data-mask="99/99/9999" data-mask-placeholder="0" placeholder="00/00/0000">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Sexo</label>
+                                        <div>
+										<div class="checkbox-inline">
+                                            <label>
+                                              <input type="radio" name="sexo" id="masculino"> Masculino
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label>
+                                              <input type="radio" name="sexo" id="feminino"> Feminino
+                                            </label>
+								        </div>
+                                            </div>
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+                                    <div class="col-sm-2">
+                                        <label>Cep</label>
+										<input id="cep" name="cep" type="text" class="form-control" data-mask="99.999-999" data-mask-placeholder="0" placeholder="00.000-000">
+									</div>
+                                    <div class="col-sm-4">
+                                         <label>Endereço</label>
+										<input id="rua" name="rua" type="text" class="form-control" placeholder="Rua">
+									</div>
+                                    <div class="col-sm-1">
+                                        <label>Numero</label>
+										<input id="numero" name="numero" type="text" class="form-control" placeholder="N°">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label>Complemento</label>
+										<input id="complemento" name="complemento" type="text" class="form-control" placeholder="Ex: Apto 33">
+                                    </div>
+									<div class="col-sm-3">
+                                        <label>Bairro</label>
+										<input id="bairro" name="bairro" type="text" class="form-control" placeholder="Bairro">
+									</div>
+								</div>
+                                
+                                <hr>
+                                
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label>Cidade</label>
+										<input id="cidade" name="cidade" type="text" class="form-control" placeholder="Cidade">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Uf</label>
+										<input id="uf" name="uf" type="text" class="form-control" placeholder="Cidade">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Senha</label>
+										<input id="senha" name="senha" type="text" class="form-control" placeholder="Senha">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Confirme Senha</label>
+										<input id="confirme" name="confirme" type="text" class="form-control" placeholder="Confirme senha">
+									</div>
+                                </div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-2">
+										<div class="btn btn-success">
+											<i class="fa fa-save"></i>
+											Salvar
+										</div>
+                                    </div>    
+				                    <div class="col-sm-2">
+										<div class="btn btn-primary">
+											<i class="fa fa-edit"></i>
+											Editar
+										</div>
+									</div>
+                                    <div class="col-sm-2">
+										<div class="btn btn-danger">
+											<i class="fa fa-times"></i>
+											Excluir
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+			  		</div>
+	  			</div>
+              
+              <div class="row">
+	  				<div class="col-md-12 panel-info">
+			  			<div class="content-box-header panel-heading">
+		  					<div class="panel-title ">Cadastro Prestador</div>
+							
+							<div class="panel-options">
+								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+							</div>
+			  			</div>
+			  			<div class="content-box-large box-with-header">
+				  			<div>
+
+								<div class="row">
+									<div class="col-sm-6">
+                                        <label>Nome</label>
+										<input id="nomePrestador" name="nomePrestador" type="text" class="form-control" placeholder="Ex: João">
+									</div>
+                                    <div class="col-sm-6">
+                                        <label>Sobrenome</label>
+										<input id="sobrenomePrestador" name="sobrenomePrestador" type="text" class="form-control" placeholder="Ex: Almeida">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-6">
+                                        <label>Email</label>
+										<input id="emailPrestador" name="emailPrestador" type="email" class="form-control" placeholder="Ex: email@email.com">
+									</div>
+									<div class="col-sm-3">
+                                        <label>Cpf</label>
+										<input id="cpfPrestador" name="cpfPrestador" type="text" class="form-control" data-mask="999.999.999-99" data-mask-placeholder="0" placeholder="000.000.000-00">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Rg</label>
+										<input id="rgPrestador" name="rgPrestador" type="text" class="form-control" placeholder="RG">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-3">
+                                        <label>Telefone</label>
+										<input id="telefonePrestador" name="telefonePrestador" type="text" class="form-control" data-mask="(99)9999-9999" data-mask-placeholder="0" placeholder="(00)0000-0000"/>
+									</div>
+									<div class="col-sm-3">
+                                        <label>Celular</label>
+										<input id="celularPrestador" name="celularPrestador" type="text" class="form-control" data-mask="(99)9999-9999" data-mask-placeholder="0" placeholder="(00)0000-0000">
+									</div>
+									<div class="col-sm-3">
+                                        <label>Nascimento</label>
+										<input id="nascimentoPrestador" name="nascimentoPrestador" type="text" class="form-control" data-mask="99/99/9999" data-mask-placeholder="0" placeholder="00/00/0000">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Sexo</label>
+                                        <div>
+										<div class="checkbox-inline">
+                                            <label>
+                                              <input type="radio" name="sexoPrestador" id="masculino"> Masculino
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-inline">
+                                            <label>
+                                              <input type="radio" name="sexoPrestador" id="feminino"> Feminino
+                                            </label>
+								        </div>
+                                            </div>
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+                                    <div class="col-sm-2">
+                                        <label>Cep</label>
+										<input id="cepPrestador" name="cepPrestador" type="text" class="form-control" data-mask="99.999-999" data-mask-placeholder="0" placeholder="00.000-000">
+									</div>
+                                    <div class="col-sm-4">
+                                         <label>Endereço</label>
+										<input id="ruaPrestador" name="ruaPrestador" type="text" class="form-control" placeholder="Rua">
+									</div>
+                                    <div class="col-sm-1">
+                                        <label>Numero</label>
+										<input id="numeroPrestador" name="numeroPrestador" type="text" class="form-control" placeholder="N°">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label>Complemento</label>
+										<input id="complementoPrestador" name="complementoPrestador" type="text" class="form-control" placeholder="Ex: Apto 33">
+                                    </div>
+									<div class="col-sm-3">
+                                        <label>Bairro</label>
+										<input id="bairroPrestador" name="bairroPrestador" type="text" class="form-control" placeholder="Bairro">
+									</div>
+								</div>
+                                
+                                <hr>
+                                
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label>Cidade</label>
+										<input id="cidadePrestador" name="cidadePrestador" type="text" class="form-control" placeholder="Cidade">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Uf</label>
+										<input id="ufPrestador" name="ufPrestador" type="text" class="form-control" placeholder="Cidade">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Senha</label>
+										<input id="senhaPrestador" name="senhaPrestador" type="text" class="form-control" placeholder="Senha">
+									</div>
+                                    <div class="col-sm-3">
+                                        <label>Confirme Senha</label>
+										<input id="confirmePrestador" name="confirmePrestador" type="text" class="form-control" placeholder="Confirme senha">
+									</div>
+                                </div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-sm-2">
+										<div class="btn btn-success">
+											<i class="fa fa-save"></i>
+											Salvar
+										</div>
+                                    </div>    
+				                    <div class="col-sm-2">
+										<div class="btn btn-primary">
+											<i class="fa fa-edit"></i>
+											Editar
+										</div>
+									</div>
+                                    <div class="col-sm-2">
+										<div class="btn btn-danger">
+											<i class="fa fa-times"></i>
+											Excluir
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+			  		</div>
+	  			</div>
+
+            </div>
+            </div>	
+    </div>
+
+    <footer>
+         <div class="container">
+             <div class="row">
+                <div class="card-user">
+                    <p></p>
+                </div>
+            </div>
+         
+            <div class="copy text-center">
+               Copyright 2014 <a href='#'>Website</a>
+            </div>
+            
+         </div>
+      </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+
+    <script src="vendors/select/bootstrap-select.min.js"></script>
+
+    <script src="vendors/tags/js/bootstrap-tags.min.js"></script>
+
+    <script src="vendors/mask/jquery.maskedinput.min.js"></script>
+
+    <script src="vendors/moment/moment.min.js"></script>
+
+    <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+     <!-- bootstrap-datetimepicker -->
+     <link href="vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+     <script src="vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script> 
+
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
